@@ -3,7 +3,7 @@ import { Phone, Mail, MessageCircle, MapPin, Star, Users, Utensils, Wifi, Car, W
 import './App.css';
 
 // Import images
-import logo from './assets/logo.png';
+import logo from './assets/logo_updated.png';
 import screenshot1 from './assets/screenshot_1.jpg';
 import screenshot2 from './assets/screenshot_2.jpg';
 import screenshot3 from './assets/screenshot_3.jpg';
@@ -13,6 +13,13 @@ import screenshot6 from './assets/screenshot_6.jpg';
 import screenshot7 from './assets/screenshot_7.jpg';
 import screenshot8 from './assets/screenshot_8.jpg';
 import screenshot9 from './assets/screenshot_9.jpg';
+// Additional Mauritania images
+import tagantLandscape from './assets/ukWg241f81Gx.jpg';
+import rachidOasis from './assets/LrNfE2bQuSVU.jpg';
+import mauritaniaDesert from './assets/NIuKsRsAwSuC.jpg';
+import traditionalArch from './assets/Udr2lnFAXNkk.jpg';
+import desertOasis from './assets/5lSsptzOOOV2.jpg';
+import rachidVillage from './assets/vYJeVnICXUPC.jpg';
 
 const translations = {
   ar: {
@@ -216,7 +223,9 @@ function App() {
 
   const images = [
     screenshot1, screenshot2, screenshot3, screenshot4, screenshot5,
-    screenshot6, screenshot7, screenshot8, screenshot9
+    screenshot6, screenshot7, screenshot8, screenshot9,
+    tagantLandscape, rachidOasis, mauritaniaDesert, traditionalArch, 
+    desertOasis, rachidVillage
   ];
 
   const handleWhatsAppMessage = () => {
