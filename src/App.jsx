@@ -2,26 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MessageCircle, MapPin, Star, Users, Utensils, Wifi, Car, Waves, Mountain, Calendar, Globe, Menu, X } from 'lucide-react';
 import './App.css';
 
-// Import images
+// Import logo only
 import logo from './assets/logo_updated.png';
-import screenshot1 from './assets/screenshot_1.jpg';
-import screenshot2 from './assets/screenshot_2.jpg';
-import screenshot3 from './assets/screenshot_3.jpg';
-import screenshot4 from './assets/screenshot_4.jpg';
-import screenshot5 from './assets/screenshot_5.jpg';
-import screenshot6 from './assets/screenshot_6.jpg';
-import screenshot7 from './assets/screenshot_7.jpg';
-import screenshot8 from './assets/screenshot_8.jpg';
-import screenshot9 from './assets/screenshot_9.jpg';
-// Additional Mauritania images
-import tagantLandscape from './assets/ukWg241f81Gx.jpg';
-import rachidOasis from './assets/LrNfE2bQuSVU.jpg';
-import mauritaniaDesert from './assets/NIuKsRsAwSuC.jpg';
-import traditionalArch from './assets/Udr2lnFAXNkk.jpg';
-import desertOasis from './assets/5lSsptzOOOV2.jpg';
-import rachidVillage from './assets/vYJeVnICXUPC.jpg';
-import tagantPlateau from './assets/eT0O59NBeyEX.jpg';
-import mauritaniaOasis from './assets/imxodHGvLwti.jpg';
 
 const translations = {
   ar: {
@@ -224,10 +206,23 @@ function App() {
   const t = translations[currentLang];
 
   const images = [
-    screenshot1, screenshot2, screenshot3, screenshot4, screenshot5,
-    screenshot6, screenshot7, screenshot8, screenshot9,
-    tagantLandscape, rachidOasis, mauritaniaDesert, traditionalArch, 
-    desertOasis, rachidVillage, tagantPlateau, mauritaniaOasis
+    '/images/screenshot_1.jpg',
+    '/images/screenshot_2.jpg',
+    '/images/screenshot_3.jpg',
+    '/images/screenshot_4.jpg',
+    '/images/screenshot_5.jpg',
+    '/images/screenshot_6.jpg',
+    '/images/screenshot_7.jpg',
+    '/images/screenshot_8.jpg',
+    '/images/screenshot_9.jpg',
+    '/images/ukWg241f81Gx.jpg',
+    '/images/LrNfE2bQuSVU.jpg',
+    '/images/NIuKsRsAwSuC.jpg',
+    '/images/Udr2lnFAXNkk.jpg',
+    '/images/5lSsptzOOOV2.jpg',
+    '/images/vYJeVnICXUPC.jpg',
+    '/images/eT0O59NBeyEX.jpg',
+    '/images/imxodHGvLwti.jpg'
   ];
 
   const handleWhatsAppMessage = () => {
@@ -357,7 +352,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${screenshot5})`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/images/screenshot_5.jpg)`,
           }}
         />
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
@@ -411,10 +406,10 @@ function App() {
               </ul>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img src={screenshot4} alt="Desert Oasis" className="rounded-lg shadow-lg" />
-              <img src={screenshot7} alt="Traditional Tent" className="rounded-lg shadow-lg" />
-              <img src={screenshot6} alt="Palm Trees" className="rounded-lg shadow-lg" />
-              <img src={screenshot9} alt="Desert Camp" className="rounded-lg shadow-lg" />
+              <img src="/images/screenshot_4.jpg" alt="Desert Oasis" className="rounded-lg shadow-lg" />
+              <img src="/images/screenshot_7.jpg" alt="Traditional Tent" className="rounded-lg shadow-lg" />
+              <img src="/images/screenshot_6.jpg" alt="Palm Trees" className="rounded-lg shadow-lg" />
+              <img src="/images/screenshot_9.jpg" alt="Desert Camp" className="rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
