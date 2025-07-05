@@ -20,6 +20,8 @@ import mauritaniaDesert from './assets/NIuKsRsAwSuC.jpg';
 import traditionalArch from './assets/Udr2lnFAXNkk.jpg';
 import desertOasis from './assets/5lSsptzOOOV2.jpg';
 import rachidVillage from './assets/vYJeVnICXUPC.jpg';
+import tagantPlateau from './assets/eT0O59NBeyEX.jpg';
+import mauritaniaOasis from './assets/imxodHGvLwti.jpg';
 
 const translations = {
   ar: {
@@ -225,7 +227,7 @@ function App() {
     screenshot1, screenshot2, screenshot3, screenshot4, screenshot5,
     screenshot6, screenshot7, screenshot8, screenshot9,
     tagantLandscape, rachidOasis, mauritaniaDesert, traditionalArch, 
-    desertOasis, rachidVillage
+    desertOasis, rachidVillage, tagantPlateau, mauritaniaOasis
   ];
 
   const handleWhatsAppMessage = () => {
@@ -233,6 +235,10 @@ function App() {
       const encodedMessage = encodeURIComponent(chatMessage);
       window.open(`https://wa.me/22241377131?text=${encodedMessage}`, '_blank');
       setChatMessage('');
+    } else {
+      // إذا لم تكن هناك رسالة، افتح واتساب مباشرة للحجز
+      const defaultMessage = encodeURIComponent('مرحباً، أود حجز غرفة في نزل الساقية. يرجى تزويدي بالتفاصيل والأسعار.');
+      window.open(`https://wa.me/22241377131?text=${defaultMessage}`, '_blank');
     }
   };
 
