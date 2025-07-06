@@ -522,7 +522,7 @@ function App() {
               <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <div className="flex items-center space-x-1">
                   <span className="text-2xl">🏕️</span>
-                  <span className="text-2xl">🌴</span>
+                  <span className="text-2xl"></span>
                 </div>
                 <div className="text-xl font-bold text-amber-600">
                   <span className="block text-lg leading-tight">Auberge</span>
