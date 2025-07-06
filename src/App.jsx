@@ -814,7 +814,6 @@ function App() {
             {/* Tent Card */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 border border-amber-100 relative">
               <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                الأكثر شعبية
               </div>
               <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-6 text-white text-center">
                 <h3 className="text-2xl font-bold mb-2">{t.pricing.tent.title}</h3>
