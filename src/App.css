@@ -167,3 +167,294 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* إصلاح مشكلة معرض الصور */
+#gallery .group {
+  background-color: #f3f4f6 !important;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  height: 16rem; /* 256px */
+}
+
+#gallery .group img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* تحسين lightbox */
+.lightbox-overlay {
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* تحسين التفاعل */
+#gallery .group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* إضافة تأثير التحميل */
+#gallery .group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  z-index: 0;
+}
+
+#gallery .group img:not([src=""]) + *::before,
+#gallery .group img[src]:not([src=""]) ~ *::before {
+  display: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
+
+/* تحسينات الأداء والمظهر العام */
+
+/* تحسين الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Amiri', 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* تحسين التمرير */
+html {
+  scroll-behavior: smooth;
+}
+
+/* تحسين الأزرار */
+button, .btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* تحسين الصور */
+img {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* تحسين الروابط */
+a {
+  transition: all 0.3s ease;
+}
+
+/* تحسين النماذج */
+input, textarea, select {
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
+}
+
+/* تحسين الظلال */
+.shadow-enhanced {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* تحسين التدرجات */
+.gradient-bg {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+/* تحسين الحركات */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* تحسين الاستجابة */
+@media (max-width: 768px) {
+  .text-responsive {
+    font-size: 0.9rem;
+  }
+  
+  .padding-responsive {
+    padding: 1rem;
+  }
+  
+  .margin-responsive {
+    margin: 0.5rem;
+  }
+}
+
+/* تحسين إمكانية الوصول */
+.focus-visible:focus {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* تحسين الأداء للصور الكبيرة */
+.lazy-image {
+  loading: lazy;
+  will-change: opacity;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image[data-loaded="false"] {
+  opacity: 0;
+}
+
+.lazy-image[data-loaded="true"] {
+  opacity: 1;
+}
+
+/* تحسين الشبكة */
+.grid-responsive {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* تحسين الألوان للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+  .auto-dark {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+}
+
+/* تحسين الطباعة */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-friendly {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* تحسين الحركة للمستخدمين الذين يفضلون تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* تحسين التباين العالي */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    border: 2px solid currentColor;
+  }
+}
+
+/* تحسين الشاشات الصغيرة */
+@media (max-width: 480px) {
+  .mobile-optimized {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .mobile-padding {
+    padding: 0.75rem;
+  }
+  
+  .mobile-margin {
+    margin: 0.5rem 0;
+  }
+}
+
+
+/* تحسينات نافذة الحجز */
+.booking-modal input,
+.booking-modal select,
+.booking-modal textarea {
+  @apply bg-white border-gray-300 text-gray-900 placeholder-gray-500;
+  @apply focus:ring-2 focus:ring-amber-500 focus:border-amber-500;
+}
+
+.booking-modal label {
+  @apply text-gray-700 font-semibold;
+}
+
+.booking-modal .submit-button {
+  @apply bg-amber-600 hover:bg-amber-700;
+  @apply text-white font-bold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300;
+}
+
+.booking-modal .cancel-button {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-4 px-8 rounded-xl transition-all duration-300;
+}
+
